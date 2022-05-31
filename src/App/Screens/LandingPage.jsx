@@ -3,10 +3,6 @@ import { Navigation } from '../Components/navigation'
 import { Header } from '../Components/header'
 import { Features } from '../Components/features'
 import { About } from '../Components/about'
-import { Services } from '../Components/services'
-import { Gallery } from '../Components/gallery'
-import { Testimonials } from '../Components/testimonials'
-import { Team } from '../Components/Team'
 import { Contact } from '../Components/contact'
 import JsonData from './data.json'
 import SmoothScroll from 'smooth-scroll'
@@ -28,10 +24,6 @@ const LandingPage = () => {
       <Header data={landingPageData.Header} />
       <Features data={landingPageData.Features} />
       <About data={landingPageData.About} />
-      <Services data={landingPageData.Services} />
-      <Gallery />
-      {/* <Testimonials data={landingPageData.Testimonials} /> */}
-      <Team data={landingPageData.Team} />
       <Contact data={landingPageData.Contact} />
     </div>
   )
