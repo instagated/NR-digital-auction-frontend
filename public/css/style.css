@@ -2,7 +2,7 @@ body, html {
 	font-family: 'Open Sans', sans-serif;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
-	color: #777;
+	color: #e6e6e6;
 	font-weight: 400;
 	width: 100% !important;
 	height: 100% !important;
@@ -40,7 +40,7 @@ p.intro {
 	line-height: 24px;
 }
 a {
-	color: #608dfd;
+	color: #13b328;
 	font-weight: 400;
 }
 a:hover, a:focus {
