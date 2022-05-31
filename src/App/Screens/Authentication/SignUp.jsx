@@ -51,7 +51,7 @@ const SignUp = ({match}) => {
   const dispatch = useDispatch();
 
   async function signUp() {
-
+    
     const {
       username,
       password,
@@ -60,6 +60,7 @@ const SignUp = ({match}) => {
       firstName,
       lastName,
       type,
+      namebiddingplatform,
     } = signUpVal;
     try {
       const { user } = await Auth.signUp({
@@ -76,7 +77,7 @@ const SignUp = ({match}) => {
       console.log("error signing up:", error);
     }
   }
-
+  
   async function ConfirmSignUp() {
     const { email, code } = signUpVal;
     const {
@@ -86,6 +87,7 @@ const SignUp = ({match}) => {
       firstName,
       lastName,
       type,
+      namebiddingplatform,
     } = signUpVal;
 
   const  userData = {
@@ -94,12 +96,13 @@ const SignUp = ({match}) => {
       first_name: firstName,
       last_name: lastName,
       phone_number: phone_number,
-      type: "user"
+      type: "user",
+      namebiddingplatform: namebiddingplatform
     };
     try {
       await Auth.confirmSignUp(email, code);
       dispatch(addNewUser(userData));
-
+      
       history.push(`/home/shamshiranees`);
     } catch (error) {
       console.log("error confirming sign up", error);
@@ -160,6 +163,19 @@ const SignUp = ({match}) => {
                 label="Email Address"
                 name="email"
                 autoComplete="email"
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                id="namebiddingplatform"
+                onChange={(val) => onValueChange("namebiddingplatform", val)}
+                value={signUpVal.namebiddingplatform}
+                label="Name of Bidding platform"
+                name="namebiddingplatform"
+                autoComplete="namebiddingplatform"
               />
             </Grid>
             <Grid item xs={12}>
@@ -242,11 +258,11 @@ const SignUp = ({match}) => {
             </Button>
               </Grid>
             </Grid>
-
+            
           </form>
         )}
       </div>
-
+      
     </Container>
   );
 }
