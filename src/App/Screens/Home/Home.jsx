@@ -75,10 +75,15 @@ useEffect(() => {
     <>
     <div >
           <Container maxWidth="sm">
-            <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-              Digital Auction
-            </Typography>
-            <Typography variant="h5" align="center" color="textSecondary" paragraph>
+
+     <Link to="#">
+       <img
+         className="logo-img"
+         src="logo.png"
+         alt=""
+       />
+     </Link>
+           <Typography variant="h5" align="center" color="textSecondary" paragraph>
             Digital Auction makes it easy and safe to buy and sell unclaimed vehicles from the comfort of your home or office.
             </Typography>
             <div className={classes.heroButtons}>
@@ -107,7 +112,7 @@ useEffect(() => {
           </Grid>
         </Container>
         </>
-    
+
   );
 }
 export default Album

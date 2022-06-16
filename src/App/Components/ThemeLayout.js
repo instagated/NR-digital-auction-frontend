@@ -86,7 +86,7 @@ export const ThemeLayout = (ComposedComponent, type = 1) => (props) => {
           paddingTop: 170,
         }}
       >
-        Design ©2021 Created by Shamshir
+        Design ©2022 by Instagate Technology
       </Footer>
     </Layout>
   );

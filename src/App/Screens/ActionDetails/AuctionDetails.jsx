@@ -21,7 +21,6 @@ import {
 } from "@material-ui/core";
 import { Colors } from "../../Theme";
 import Swiper from "react-id-swiper";
-import "swiper/css/swiper.css";
 import { Typography, Alert, Row, Col, Progress } from "antd";
 import { Timeline, notification } from "antd";
 import Countdown from "react-countdown";
@@ -59,7 +58,7 @@ function AuctionDetails({ location, match }) {
   const selectedData = location.state.selectedItem;
   const dispatch = useDispatch();
   const biddings = useSelector(({ home }) => home.auctionBiddings.biddings);
-  
+
   const currentBido = useSelector(({ home }) => home.auctionBiddings.currentBid);
   const currentEndTime = useSelector(({ home }) => home.auctionBiddings.currentBidEndTime);
 
@@ -90,7 +89,7 @@ function AuctionDetails({ location, match }) {
       .post("https://socket-io-2.herokuapp.com/api/bidding", data)
       .then((response) => {
         sendMessage(data);
-        
+
       })
       .catch((error) => {
         console.log(error);

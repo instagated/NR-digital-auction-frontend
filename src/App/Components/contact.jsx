@@ -138,7 +138,7 @@ export const Contact = (props) => {
                   </li>
                   <li>
                     <a href={props.data ? props.data.youtube : '/'}>
-                      <i className='fa fa-youtube'></i>
+                      <i className='fa fa-linkedin'></i>
                     </a>
                   </li>
                 </ul>
@@ -150,9 +150,9 @@ export const Contact = (props) => {
       <div id='footer'>
         <div className='container text-center'>
           <p>
-            &copy; 2020. Design by{' '}
-            <a href='https://github.com/shamshiranees' rel='nofollow'>
-              Shamshir Anees
+            &copy; 2022. Design by{' '}
+            <a href='https://github.com/instagated' rel='nofollow'>
+              Instagate Technology
             </a>
           </p>
         </div>

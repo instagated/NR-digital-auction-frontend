@@ -59,12 +59,12 @@ export default function Profile() {
           style={{ width: 240, height: 300 }}
           cover={<div><center></center></div>}
         >
-        
+
 
         <form className={classes.form} noValidate>
           <center>
           <img alt="example" src="https://cdn.pixabay.com/photo/2017/06/13/12/53/profile-2398782_1280.png" style= {{width:100}}/>
-          {/* <form className={classes.form} noValidate>
+          <form className={classes.form} noValidate>
           <Grid container>
             <Grid item xs={6} sm={2}>
             <Typography component="h1" variant="h5" level={5}>
@@ -77,7 +77,7 @@ export default function Profile() {
             </Typography>
             </Grid>
             </Grid>
-            </form> */}
+            </form>
             <Typography component="h1" variant="h5" level={5}>
             {userData && userData.first_name}
             </Typography>
@@ -88,11 +88,11 @@ export default function Profile() {
             {userData && userData.namebiddingplatform}
             </Typography>
          </center>
-         
+
         </form>
         </Card>
       </div>
-      
+
     </Container>
   );
 }

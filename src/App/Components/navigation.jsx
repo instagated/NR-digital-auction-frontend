@@ -23,9 +23,17 @@ const history = useHistory()
             <span className='icon-bar'></span>{' '}
             <span className='icon-bar'></span>{' '}
           </button>
-          <a className='navbar-brand page-scroll' href='#page-top'>
-            Digital Auction
-          </a>{' '}
+        <div class="w-2/12 sm:w-2/12 px-4">
+
+          <a href="/">
+            <img
+              className="logo-img"
+              src="img/logo.png"
+              alt=""
+              />
+          </a>
+          </div>
+
         </div>
 
         <div
@@ -41,26 +49,6 @@ const history = useHistory()
             <li>
               <a href='#about' className='page-scroll'>
                 About
-              </a>
-            </li>
-            <li>
-              <a href='#services' className='page-scroll'>
-                Services
-              </a>
-            </li>
-            {/* <li>
-              <a href='#portfolio' className='page-scroll'>
-                Gallery
-              </a>
-            </li>
-            <li>
-              <a href='#testimonials' className='page-scroll'>
-                Testimonials
-              </a>
-            </li> */}
-            <li>
-              <a href='#team' className='page-scroll'>
-                Team
               </a>
             </li>
             <li>

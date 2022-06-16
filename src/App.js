@@ -16,7 +16,7 @@ import Category from "./App/Screens/Category/Category";
 import Profile from "./App/Screens/Profile/Profile";
 import LandingPage from "./App/Screens/LandingPage";
 import Settings from "./App/Screens/Settings/Settings"
-
+import React from "react"
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -31,6 +31,19 @@ const theme = createMuiTheme({
 })
 
 function App() {
+  const [data, setData] = React.useState([]);
+  React.useEffect(() => {
+    const fetchLocation = async () => {
+      await JSON.load("https://api.gsa.gov/assets/gsaauctions/v2/auctions?api_key=DEMO_KEY&format=JSON")
+        .then((res) => res.json())
+        .then((data) => {
+          setData(data);
+          console.log(data);
+       });
+     };
+     fetchLocation();
+   }, []);
+
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
@@ -40,8 +53,8 @@ function App() {
             <Route exact path="/home/:id/" component={ThemeLayout(Home)} />
             <Route exact path="/service-signup" component={ThemeLayout(SignUp,2)} />
 
-            
-            
+
+
             <Route exact path="/detail/:id" component={ThemeLayout(AuctionDetails)} />
             <Route exact path="/signup" component={ThemeLayout(SignUp,2)} />
             <Route exact path="/login" component={ThemeLayout(SignIn,2)} />
